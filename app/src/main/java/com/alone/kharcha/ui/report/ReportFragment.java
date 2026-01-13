@@ -33,42 +33,13 @@ public class ReportFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_report, container, false);
 
-//        tvIncome = view.findViewById(R.id.tvIncome);
-//        tvExpense = view.findViewById(R.id.tvExpense);
-//        tvProfitLoss = view.findViewById(R.id.tvProfit);
-
-
         rvTransactions = view.findViewById(R.id.rvTransactions);
         rvTransactions.setLayoutManager(new LinearLayoutManager(getContext()));
-      //  loadMonthlyReport();
         loadAllTransactions();
         return view;
     }
 
-//    private void loadMonthlyReport() {
-//
-//        String month = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
-//                .format(new Date());
-//
-//        AppDatabase db = AppDatabase.getInstance(getContext());
-//
-//        double income = db.transactionDao().getMonthlySum("INCOME", month);
-//        double expense = db.transactionDao().getMonthlySum("EXPENSE", month);
-//        double result = income - expense;
-//
-//        tvIncome.setText("Income: ₹" + income);
-//        tvExpense.setText("Expense: ₹" + expense);
-//
-//        if (result >= 0) {
-//            tvProfitLoss.setText("Profit: ₹" + result);
-//            tvProfitLoss.setTextColor(
-//                    getResources().getColor(android.R.color.holo_green_dark));
-//        } else {
-//            tvProfitLoss.setText("Loss: ₹" + Math.abs(result));
-//            tvProfitLoss.setTextColor(
-//                    getResources().getColor(android.R.color.holo_red_dark));
-//        }
-//    }
+
 
     private void loadAllTransactions() {
 

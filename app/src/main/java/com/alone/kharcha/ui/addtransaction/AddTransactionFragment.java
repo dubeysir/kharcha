@@ -29,7 +29,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-//import com.alone.kharcha.databinding.FragmentGalleryBinding;
 
 
 public class AddTransactionFragment extends Fragment {
@@ -38,9 +37,7 @@ public class AddTransactionFragment extends Fragment {
     Spinner spCategory;
     RadioGroup rgType;
     Button btnSave;
-    int selectedCategoryId = -1;
 
-//    private CategoryViewModel categoryViewModel;
     private AddTransactionViewModel transactionViewModel;
 
 
@@ -63,12 +60,7 @@ public class AddTransactionFragment extends Fragment {
             public void afterTextChanged(Editable s) {}
         };
 
-//        etQuantity.addTextChangedListener(calculatorWatcher);
-//        etPrice.addTextChangedListener(calculatorWatcher);
 
-//
-//        categoryViewModel =
-//                new ViewModelProvider(this).get(CategoryViewModel.class);
 
         transactionViewModel =
                 new ViewModelProvider(this).get(AddTransactionViewModel.class);
@@ -98,7 +90,6 @@ public class AddTransactionFragment extends Fragment {
             etTitle.setError("Required");
             return;
         }
-       // double amount = Double.parseDouble(etAmount.getText().toString());
 
         String qtyStr = etQuantity.getText().toString();
         String priceStr = etPrice.getText().toString();
@@ -129,11 +120,6 @@ public class AddTransactionFragment extends Fragment {
         t.type = type;
         t.quantity = qty;
         t.pricePerUnit = price;
-
-
-
-//        t.date = new SimpleDateFormat("yyyy-MM", Locale.getDefault())
-//                .format(new Date());
         t.timestamp = System.currentTimeMillis();
 
         AppDatabase db = AppDatabase.getInstance(getContext());
@@ -177,28 +163,3 @@ public class AddTransactionFragment extends Fragment {
     }
 
 }
-
-//public class AddTransactionFragment extends Fragment {
-//
-//
-//    private FragmentGalleryBinding binding;
-//
-//    public View onCreateView(@NonNull LayoutInflater inflater,
-//                             ViewGroup container, Bundle savedInstanceState) {
-//        AddTransactionViewModel addTransactionViewModel =
-//                new ViewModelProvider(this).get(AddTransactionViewModel.class);
-//
-//        binding = FragmentGalleryBinding.inflate(inflater, container, false);
-//        View root = binding.getRoot();
-//
-//        final TextView textView = binding.textGallery;
-//        addTransactionViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-//        return root;
-//    }
-//
-//    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        binding = null;
-//    }
-//}

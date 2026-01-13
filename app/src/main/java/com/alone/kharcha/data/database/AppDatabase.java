@@ -9,7 +9,6 @@ import androidx.room.RoomDatabase;
 //import com.alone.kharcha.data.dao.CategoryDao;
 import com.alone.kharcha.data.dao.TransactionDao;
 import com.alone.kharcha.data.entity.TransactionEntity;
-//import com.alone.kharcha.data.entity.Category;
 
 @Database(
         entities = {TransactionEntity.class},
@@ -38,7 +37,5 @@ public abstract class AppDatabase extends RoomDatabase {
 }
 
 
-//    public CategoryDao categoryDao() {
-//        return null;
-//    }
+
 

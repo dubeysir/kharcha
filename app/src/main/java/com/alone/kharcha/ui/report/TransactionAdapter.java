@@ -54,7 +54,6 @@ public class TransactionAdapter
         TransactionEntity t = list.get(position);
 
         holder.tvTitle.setText(t.title);
-       // holder.tvAmount.setText("₹ " + t.amount);
         SimpleDateFormat sdf =
                 new SimpleDateFormat("dd MMM yyyy, hh:mm a", Locale.getDefault());
 
@@ -73,7 +72,6 @@ public class TransactionAdapter
             holder.tvAmount.setTextColor(
                     Color.parseColor("#C62828")); // red
         }
-       // holder.tvDate.setText(t.date);
     }
 
 

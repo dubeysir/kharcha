@@ -24,8 +24,4 @@ public class AddTransactionViewModel extends ViewModel {
         db = null;
     }
 
-    public void insertTransaction(Context context, TransactionEntity t) {
-        AppDatabase database = AppDatabase.getInstance(context);
-        database.transactionDao().insert(t);
-    }
 }

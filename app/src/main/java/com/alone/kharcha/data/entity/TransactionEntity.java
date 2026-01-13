@@ -22,8 +22,18 @@ public class TransactionEntity {
     public Double pricePerUnit;   // nullable
 
 
-//    public String date;           // yyyy-MM
-    public  long timestamp;
+    public  long timestamp; //for date with time yyyy-mm-dd hh:mm
 
+    public String getTitle() {
+        return title;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
 }
 
