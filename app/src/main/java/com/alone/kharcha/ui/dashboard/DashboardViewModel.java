@@ -39,13 +39,7 @@ public class DashboardViewModel extends AndroidViewModel {
         double income  = repository.getCurrentMonthIncome(start, end);
 
 
-//        String currentMonth =
-//                new SimpleDateFormat("yyyy-MM", Locale.getDefault())
-//                        .format(new Date());
-//
-//        currentMonthExpense.setValue(
-//                repository.getCurrentMonthExpense(currentMonth)
-//        );
+
 
         // 🔥 THIS is the only line needed
         currentMonthExpense.setValue(expense);

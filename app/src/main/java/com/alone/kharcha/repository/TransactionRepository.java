@@ -30,13 +30,8 @@ public class TransactionRepository {
     public double getTotalExpense() {
         return db.transactionDao().getTotalSum("EXPENSE");
     }
-    public void insert(TransactionEntity t) {
-        db.transactionDao().insert(t);
-    }
 
-    public double getMonthlySum(String type, long start,long end) {
-        return db.transactionDao().getMonthlySum(type, start,end);
-    }
+
     public double getCurrentMonthExpense(long start, long end) {
         return db.transactionDao().getMonthlySum("EXPENSE", start, end);
     }
@@ -47,8 +42,6 @@ public class TransactionRepository {
 
 
 
-//    public double getCurrentMonthExpense(String month) {
-//        return db.transactionDao().getCurrentMonthExpense(month);
-//    }
+
 }
 

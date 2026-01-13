@@ -29,20 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-//        AppDatabase db = AppDatabase.getInstance(this);
-//
-//        if (db.categoryDao().getAll().isEmpty()) {
-//
-//            String[] defaults = {"Food", "Travel", "Stock", "Shopping"};
-//
-//            for (String name : defaults) {
-//                Category c = new Category();
-//                c.name = name;
-//                db.categoryDao().insert(c);
-//            }
-//        }
-
         setSupportActionBar(binding.appBarMain.toolbar);
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
